@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Users",
+    "fields": {
+      "name": {
+        "type": "string",
+        "required": true
+      },
+      "age": {
+        "type": "number",
+        "required": false
+      },
+      "password": {
+        "type": "password",
+        "required": true
+      },
+      "email": {
+        "type": "string",
+        "required": true,
+        "unique": true
+      }
+    }
+  },
+  {
+    "name": "Post",
+    "fields": {
+      "name": {
+        "type": "string",
+        "required": true
+      },
+      "description": {
+        "type": "string",
+        "required": true
+      },
+      "userId": {
+        "type": "number",
+        "required": true,
+        "reference": {
+          "model": "Users"
+        }
+      }
+    }
+  },
+  {
+    "name": "Jobs",
+    "fields": {
+      "name": {
+        "type": "string",
+        "required": false
+      },
+      "description": {
+        "type": "string",
+        "required": false
+      },
+      "salary": {
+        "type": "string",
+        "required": false
+      }
+    }
+  }
+]
